@@ -6,7 +6,7 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name="individuals")
+@Table(name="organizations")
 @Data
 public class Organization {
 	@Id
@@ -15,6 +15,10 @@ public class Organization {
             name = "uuid",
             strategy = "uuid2"
     )
+//    @GenericGenerator(
+//            name = "GUID",
+//            strategy = "org.hibernate.id.GUIDGenerator"
+//    )
     @Column(name = "id", updatable = false, nullable = false, length = 36)
     private String id;
 	public String Name;
