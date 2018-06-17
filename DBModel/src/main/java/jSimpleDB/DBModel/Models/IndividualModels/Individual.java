@@ -11,10 +11,10 @@ import java.time.LocalDate;
 @Data
 public class Individual {
     @Id
-    @GeneratedValue(generator = "GUID", strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "uuid", strategy = GenerationType.AUTO)
     @GenericGenerator(
-            name = "GUID",
-            strategy = "org.hibernate.id.GUIDGenerator"
+            name = "uuid",
+            strategy = "uuid2"
     )
     @Column(name = "id", updatable = false, nullable = false, length = 36)
     private String id;
